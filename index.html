@@ -43,7 +43,6 @@
     </div>
     <script>
       const counter = document.getElementById("counter");
-      const resetBtn = document.getElementById("reset-el");
       let num = 0;
       document.addEventListener("keyup", (event) => {
         if (event.code === "Space") {
@@ -52,7 +51,7 @@
         }
       });
 
-      resetBtn.addEventListener("click", reset);
+      document.addEventListener("click", reset);
 
       function reset() {
         num = 0;
