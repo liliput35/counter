@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #1e1e1e;
+      color: #e5e5e5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
+      font-family: "Poppins", sans-serif;
+    }
+
+    p {
+      font-size: 15em;
+    }
+
+    button {
+      border: none;
+      color: #e5e5e5;
+      background-color: blue;
+      font-size: 2.4em;
+      padding: 2px 5px;
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <p id="counter">0</p>
+      <button id="reset-el">reset</button>
+    </div>
+    <script>
+      const counter = document.getElementById("counter");
+      const resetBtn = document.getElementById("reset-el");
+      let num = 0;
+      document.addEventListener("keyup", (event) => {
+        if (event.code === "Space") {
+          num += 1;
+          counter.textContent = num;
+        }
+      });
+
+      resetBtn.addEventListener("click", reset);
+
+      function reset() {
+        num = 0;
+        counter.textContent = num;
+      }
+    </script>
+  </body>
+</html>
